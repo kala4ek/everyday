@@ -14,8 +14,12 @@
   "permissions": [
     "http://everydayword.ru/*",
     "http://drupal-ed.com/*",
-    "https://ajax.googleapis.com/*"
+    "storage",
+    "alarms"
   ],
+  "background": {
+    "page": "background.html"
+  },
   "manifest_version": 2,
   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
 }

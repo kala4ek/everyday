@@ -4,10 +4,41 @@
     <title>
       EveryDay
     </title>
-    <script src="jquery.min.js"></script>
-    <script src="everyday.js"></script>
+    <script src="includes/js/jquery.min.js"></script>
+    <script src="includes/js/bootstrap.min.js"></script>
+    <script src="includes/js/everyday.js"></script>
+    <link rel="stylesheet" type="text/css" href="includes/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="includes/css/everyday.css">
   </head>
   <body>
-    Hello world!
+    <div role="tabpanel">
+
+      <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active">
+          <a href="#drupal" aria-controls="drupal" role="tab" data-toggle="tab">Drupal</a>
+        </li>
+        <li role="presentation">
+          <a href="#word" aria-controls="word" role="tab" data-toggle="tab">Word</a>
+        </li>
+      </ul>
+
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="drupal">
+          <h3 id="title">
+            <a>Copy prevention</a>
+          </h3>
+          <p id="description">
+            Allow to you try to protect your content/images and prevent/disable at least the most simple ways to copy it.
+          </p>
+          <div id="category">
+            <a>Modules</a>
+          </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="word">
+
+        </div>
+      </div>
+
+    </div>
   </body>
 </html>

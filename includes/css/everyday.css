@@ -1,0 +1,14 @@
+body {
+  height: 200px;
+  width: 400px;
+}
+
+div.tab-pane h3,
+div.tab-pane p {
+  text-align: center;
+}
+
+div.tab-pane div {
+  text-align: right;
+  padding-right: 10px;
+}
