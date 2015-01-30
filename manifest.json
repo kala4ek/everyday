@@ -3,23 +3,23 @@
   "version": "0.1",
   "description": "Displays the today event/tip/word from each EveryDay service.",
   "icons": {
-    "128": "everyday_icon128.png",
-    "48": "everyday_icon48.png"
+    "128": "icons/everyday_icon128.png",
+    "48": "icons/everyday_icon48.png"
   },
   "browser_action": {
     "default_title": "EveryDay",
-    "default_icon": "everyday_icon.png",
+    "default_icon": "icons/everyday_icon.png",
     "default_popup": "everyday.html"
   },
   "permissions": [
     "http://everydayword.ru/*",
     "http://drupal-ed.com/*",
     "storage",
-    "alarms"
+    "alarms",
+    "notifications"
   ],
   "background": {
     "page": "background.html"
   },
-  "manifest_version": 2,
-  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+  "manifest_version": 2
 }
