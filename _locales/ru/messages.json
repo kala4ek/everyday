@@ -1,0 +1,14 @@
+{
+  "extensionDesc": {
+    "message": "Каждый день показывает новое слово/совет или подсказку по CMF/CMS Drupal.",
+    "description": "Описание расширения"
+  },
+  "loadingText": {
+    "message": "Загружаю новый пункт...",
+    "description": "Стандартный текст загрузки"
+  },
+  "drupalBlockTitle": {
+    "message": "Друпал",
+    "description": "Название друпал вкладки"
+  }
+}

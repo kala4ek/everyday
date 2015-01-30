@@ -1,4 +1,4 @@
-chrome.alarms.create('everyday_alarm', {periodInMinutes: 1});
+chrome.alarms.create('everyday_alarm', {periodInMinutes: 60});
 
 function everyday_notify() {
   chrome.notifications.create(
@@ -11,6 +11,7 @@ function everyday_notify() {
     },
     function() {}
   );
+  chrome.browserAction.setBadgeText({text: '1'});
 }
 
 chrome.alarms.onAlarm.addListener(function(alarm) {
@@ -20,12 +21,14 @@ chrome.alarms.onAlarm.addListener(function(alarm) {
       var now = new Date();
       var start = new Date(now.getFullYear(), 0, 0);
       var diff = now - start;
-      var oneDay = 1000 * 60;
+      var oneDay = 1000 * 60 * 60 * 24;
       var day = Math.round(diff / oneDay);
 
       if (items.everyday_last_date == undefined || (items.everyday_last_date > day || day > items.everyday_last_date)) {
         chrome.storage.sync.set({'everyday_last_date': day}, function() {});
-        everyday_notify();
+        chrome.storage.sync.set({'everyday_show': true}, function() {
+          everyday_notify();
+        });
       }
     });
   }

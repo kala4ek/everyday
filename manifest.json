@@ -1,14 +1,15 @@
 {
   "name": "EveryDay",
-  "version": "0.1",
-  "description": "Displays the today event/tip/word from each EveryDay service.",
+  "version": "1.0",
+  "description": "__MSG_extensionDesc__",
+  "default_locale": "en",
   "icons": {
     "128": "icons/everyday_icon128.png",
     "48": "icons/everyday_icon48.png"
   },
   "browser_action": {
     "default_title": "EveryDay",
-    "default_icon": "icons/everyday_icon.png",
+    "default_icon": "icons/everyday_icon38.png",
     "default_popup": "everyday.html"
   },
   "permissions": [
