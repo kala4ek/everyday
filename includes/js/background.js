@@ -1,4 +1,4 @@
-chrome.alarms.create('everyday_alarm', {periodInMinutes: 60});
+chrome.alarms.create('everyday_alarm', {periodInMinutes: 30});
 
 function everyday_notify() {
   chrome.notifications.create(
@@ -24,7 +24,7 @@ chrome.alarms.onAlarm.addListener(function(alarm) {
       var oneDay = 1000 * 60 * 60 * 24;
       var day = Math.round(diff / oneDay);
 
-      if (items.everyday_last_date == undefined || (items.everyday_last_date > day || day > items.everyday_last_date)) {
+      if (items.everyday_last_date == undefined || items.everyday_last_date != day) {
         chrome.storage.sync.set({'everyday_last_date': day}, function() {});
         chrome.storage.sync.set({'everyday_show': true}, function() {
           everyday_notify();
