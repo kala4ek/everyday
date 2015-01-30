@@ -1,0 +1,26 @@
+{
+  "name": "EveryDay",
+  "version": "1.0",
+  "description": "__MSG_extensionDesc__",
+  "default_locale": "en",
+  "icons": {
+    "128": "icons/everyday_icon128.png",
+    "48": "icons/everyday_icon48.png"
+  },
+  "browser_action": {
+    "default_title": "EveryDay",
+    "default_icon": "icons/everyday_icon38.png",
+    "default_popup": "everyday.html"
+  },
+  "permissions": [
+    "http://everydayword.ru/*",
+    "http://drupal-ed.com/*",
+    "storage",
+    "alarms",
+    "notifications"
+  ],
+  "background": {
+    "page": "background.html"
+  },
+  "manifest_version": 2
+}

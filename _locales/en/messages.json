@@ -1,0 +1,14 @@
+{
+  "extensionDesc": {
+    "message": "Displays the today event/tip/word from each EveryDay service.",
+    "description": "Extension description"
+  },
+  "loadingText": {
+    "message": "Loading new tip...",
+    "description": "Default loading text"
+  },
+  "drupalBlockTitle": {
+    "message": "Drupal",
+    "description": "Drupal tab name"
+  }
+}
