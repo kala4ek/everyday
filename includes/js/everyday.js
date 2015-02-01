@@ -1,4 +1,8 @@
 jQuery(document).ready(function() {
+  jQuery('html').on('contextmenu', function(e) {
+    e.preventDefault();
+  });
+
   jQuery('p.description').html(chrome.i18n.getMessage('loadingText'));
   jQuery('li a[aria-controls="drupal"]').html(chrome.i18n.getMessage('drupalBlockTitle'));
 

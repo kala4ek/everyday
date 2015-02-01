@@ -1,15 +1,16 @@
 {
   "name": "EveryDay",
-  "version": "1.2",
+  "version": "1.3",
   "description": "__MSG_extensionDesc__",
   "default_locale": "en",
   "icons": {
-    "128": "icons/everyday_icon128.png",
-    "48": "icons/everyday_icon48.png"
+    "128": "icons/everyday128.png",
+    "48": "icons/everyday48.png",
+    "16": "icons/everyday16.png"
   },
   "browser_action": {
     "default_title": "EveryDay",
-    "default_icon": "icons/everyday_icon38.png",
+    "default_icon": "icons/everyday128.png",
     "default_popup": "everyday.html"
   },
   "permissions": [
