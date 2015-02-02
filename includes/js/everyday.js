@@ -13,7 +13,7 @@ jQuery(document).ready(function() {
         var everyday_locale = chrome.i18n.getMessage('@@ui_locale');
         var everyday_drupal_url = 'http://drupal-ed.com/'
           + everyday_locale.split('_')[0]
-          + '/js/ded_api/tip_get?last_id=';
+          + '/api/v1/tip/';
 
         if (items.everyday_last_id == undefined) {
           everyday_drupal_url += '0';
@@ -26,17 +26,17 @@ jQuery(document).ready(function() {
           url: everyday_drupal_url,
           dataType: 'json',
           success: function(response) {
-            if (response.status == 1) {
-              jQuery('h3.title').html(response.data.title_link);
-              jQuery('p.description').html(response.data.description);
-              jQuery('div.category').html(response.data.category_link);
+            if (response.result.status == 1) {
+              jQuery('h3.title').html(response.result.data.title_link);
+              jQuery('p.description').html(response.result.data.description);
+              jQuery('div.category').html(response.result.data.category_link);
 
               chrome.storage.sync.set({'everyday_show': false}, function() {});
-              chrome.storage.sync.set({'everyday_last_data': response.data}, function() {});
-              chrome.storage.sync.set({'everyday_last_id': response.data.id}, function() {});
+              chrome.storage.sync.set({'everyday_last_data': response.result.data}, function() {});
+              chrome.storage.sync.set({'everyday_last_id': response.result.data.id}, function() {});
             }
             else {
-              alert(response.error);
+              alert(response.result.error);
             }
           },
           error: function(jqXHR, textStatus, errorThrown) {
