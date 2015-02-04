@@ -45,7 +45,7 @@ chrome.alarms.onAlarm.addListener(function(alarm) {
  */
 chrome.runtime.onInstalled.addListener(function(details){
   if (details.reason == 'update') {
-    if (version_compare('1.4', details.previousVersion) == 1) {
+    if (version_compare('1.4.1', details.previousVersion) == 1) {
       chrome.storage.sync.get('everyday_last_data', function(items) {
         chrome.storage.sync.get('everyday_drupal_last_data', function(word_items) {
           if (word_items.everyday_drupal_last_data == undefined && items.everyday_last_data != undefined) {
