@@ -1,5 +1,8 @@
 chrome.alarms.create('everyday_alarm', {periodInMinutes: 30});
 
+/**
+ * Show notification about new tips.
+ */
 function everyday_notify() {
   chrome.notifications.create(
     'name-for-notification',
@@ -7,13 +10,16 @@ function everyday_notify() {
       type: 'basic',
       iconUrl: 'icons/everyday_icon128.png',
       title: "EveryDay",
-      message: "Today's tips are available for you!"
+      message: chrome.i18n.getMessage('notificationText')
     },
     function() {}
   );
   chrome.browserAction.setBadgeText({text: '1'});
 }
 
+/**
+ * Check if it's time to update the tip?
+ */
 chrome.alarms.onAlarm.addListener(function(alarm) {
   if (alarm.name == 'everyday_alarm') {
     chrome.storage.sync.get('everyday_last_date', function(items) {
@@ -31,5 +37,22 @@ chrome.alarms.onAlarm.addListener(function(alarm) {
         });
       }
     });
+  }
+});
+
+/**
+ * Install/update actions.
+ */
+chrome.runtime.onInstalled.addListener(function(details){
+  if (details.reason == 'update') {
+    if (version_compare('1.4', details.previousVersion) == 1) {
+      chrome.storage.sync.get('everyday_last_data', function(items) {
+        chrome.storage.sync.get('everyday_drupal_last_data', function(word_items) {
+          if (word_items.everyday_drupal_last_data == undefined && items.everyday_last_data != undefined) {
+            chrome.storage.sync.set({'everyday_word_last_data': items.everyday_last_data}, function() {});
+          }
+        });
+      });
+    }
   }
 });

@@ -4,11 +4,19 @@
     "description": "Описание расширения"
   },
   "loadingText": {
-    "message": "Загружаю новый пункт...",
+    "message": "Загружаю данные...",
     "description": "Стандартный текст загрузки"
   },
   "drupalBlockTitle": {
     "message": "Друпал",
     "description": "Название друпал вкладки"
+  },
+  "wordBlockTitle": {
+    "message": "Умное слово",
+    "description": "Название вкладки со словами"
+  },
+  "notificationText": {
+    "message": "Сегодняшние советы доступны для вас",
+    "description": "Текст всплывающего уводомления"
   }
 }
