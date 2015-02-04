@@ -4,11 +4,19 @@
     "description": "Extension description"
   },
   "loadingText": {
-    "message": "Loading new tip...",
+    "message": "Loading data...",
     "description": "Default loading text"
   },
   "drupalBlockTitle": {
     "message": "Drupal",
     "description": "Drupal tab name"
+  },
+  "wordBlockTitle": {
+    "message": "Smart word",
+    "description": "Word tab name"
+  },
+  "notificationText": {
+    "message": "Today's tips are available for you!",
+    "description": "Notification text"
   }
 }
