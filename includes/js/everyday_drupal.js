@@ -26,7 +26,6 @@ var Drupal = new function() {
             jQuery('#drupal p.description').html(response.result.data.description);
             jQuery('#drupal div.category').html(response.result.data.category_link);
 
-            chrome.storage.sync.set({'everyday_show': false}, function() {});
             chrome.storage.sync.set({'everyday_drupal_last_data': response.result.data}, function() {});
             chrome.storage.sync.set({'everyday_drupal_last_id': response.result.data.id}, function() {});
           }

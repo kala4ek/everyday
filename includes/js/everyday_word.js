@@ -22,7 +22,6 @@ var Word = new function() {
             jQuery('#word h3.title').html(response.result.data.title_link);
             jQuery('#word p.description').html(response.result.data.description);
 
-            chrome.storage.sync.set({'everyday_show': false}, function() {});
             chrome.storage.sync.set({'everyday_word_last_data': response.result.data}, function() {});
             chrome.storage.sync.set({'everyday_word_last_id': response.result.data.id}, function() {});
           }
