@@ -18,5 +18,9 @@
   "notificationText": {
     "message": "Сегодняшние советы доступны для вас",
     "description": "Текст всплывающего уводомления"
+  },
+  "authorTitle": {
+    "message": "Автор",
+    "description": "Префикс к полю 'автор'"
   }
 }

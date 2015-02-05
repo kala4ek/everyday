@@ -8,7 +8,7 @@ function everyday_notify() {
     'name-for-notification',
     {
       type: 'basic',
-      iconUrl: 'icons/everyday_icon128.png',
+      iconUrl: 'icons/everyday128.png',
       title: "EveryDay",
       message: chrome.i18n.getMessage('notificationText')
     },
