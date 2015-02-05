@@ -18,5 +18,9 @@
   "notificationText": {
     "message": "Today's tips are available for you!",
     "description": "Notification text"
+  },
+  "authorTitle": {
+    "message": "Author",
+    "description": "Label of 'author' text"
   }
 }
