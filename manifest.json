@@ -1,6 +1,6 @@
 {
   "name": "EveryDay",
-  "version": "1.5.2",
+  "version": "1.6.0",
   "description": "__MSG_extensionDesc__",
   "default_locale": "ru",
   "icons": {
@@ -15,7 +15,6 @@
   },
   "permissions": [
     "http://everydayword.ru/*",
-    "http://drupal-ed.com/*",
     "storage",
     "alarms",
     "notifications"
